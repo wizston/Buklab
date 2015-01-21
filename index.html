@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html data-ng-app="customersApp">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]> <html class=""> <![endif]-->
+<head> 
+    <meta charset="utf-8">
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>PieRates Books</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Angular -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>-->
+    <!-- Firebase -->
+    <!--<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>-->
+    <!-- AngularFire -->
+    <!--<script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>-->
+    <!--<script src="app/app.js"></script>-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/whhg.css" />
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--Rotating Div-->
+    <link href="assets/css/rotating-card.css" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- TODO: uncomment skin styles.
+         Note, you can use another skin found in the "css" folder, or create your own one -->
+    <!-- <link rel="stylesheet" href="css/skin-dark.css"> -->
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+
+</head>
+<body ng-controller="BookController">
+
+    <!--  LOGOTYPE LINE  -->
+    <!--  TODO: Change domain name and call to action message below -->
+    <div id="Head" class="container">
+        <div class="row">
+            <a href="" ng-click="sortField = ''" class="col span_16">
+                <h1 id="Domain">
+                    BukLab<br>
+                    <span>Rate the books you love...!</span>
+                </h1>
+            </a>
+
+            <div id="Action" ng-click="sortField = ''" class="col span_8">
+                <a href="" class="btn btn-icon btn-block"><i class="icon icon-book"></i> View all books!</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Stats" class="container">
+        <div class="row">
+            <a ng-href="" ng-click="sortField = {Category:'ROMANCE'}" class="col span_4"><b class="value" > {{CategoryCounts("ROMANCE")}}</b><i class="info">ROMANCE</i></a>
+            <a href="" ng-click="sortField = {Category: 'THRILLER'}" class="col span_4"><b class="value">{{CategoryCounts("THRILLER")}}</b><i class="info">THRILLER</i></a>
+            <a href="" ng-click="sortField = {Category: 'CLASSICS'}" class="col span_4"><b class="value">{{CategoryCounts("CLASSICS")}}</b><i class="info">CLASSICS</i></a>
+            <a href="" ng-click="sortField = {Category: 'FANTASY'}" class="col span_4"><b class="value">{{CategoryCounts("FANTASY")}}</b><i class="info">FANTASY</i></a>
+            <a href="" ng-click="sortField= {Category: 'MYSTERY'}" class="col span_4"><b class="value">{{CategoryCounts("MYSTERY")}}</b><i class="info">MYSTERY</i></a>
+            <a href="" ng-click="sortField = {Category: 'SCIENCE FICTION'}" class="col span_4"><b class="value">{{CategoryCounts("SCIENCE FICTION")}}</b><i class="info">SCIENCE FICTION</i></a>
+        </div>
+    </div>
+    <!-- END OF STATS LINE  -->
+    <!-- CONTENT -->
+    <!-- TODO: Change content in the rows/columns below
+         Please note, 24-columns grid is used in the template, so you can reorder the blocks
+         to make, for example, 2-columns layout (use a pair of col span_12) or 4-column one
+         (use 4 copies of col span_6) -->
+    <div id="Content" class="container">
+
+        <div class="row special">
+            <div class="col span_24">
+                <h3 class="align-center">
+                    Remember those super nice books you once read?<br />
+                    Cool, Many of us do; And thats why we are here to let you rate those books just as you love it.
+                    <br /><span style="color:red">NOTE: You are only allowed to rate each book one IP address at a time.</span>
+                </h3>
+            </div>
+        </div>
+
+        <!-- Please heart it if you like! -->
+
+
+
+
+
+        <div animated-view><img style="position: fixed; top: 50%; left: 50%; margin-top: -50px; margin-left: -100px;" src="assets/images/725.GIF" /> </div>
+
+
+         <!-- end of row -->
+
+        <hr class="divider">
+
+        <div class="row padding">
+            <div class="col span_8">
+
+                <!-- "About seller" text block. Feel free to replace it by any other text or advertisement -->
+                <h2>About Website</h2>
+                <p>
+                    This website is a liltle demostration for a job interview stage, Please NOTE: It is not a functioning website, it is just for evaluation.
+                    and it is developed using <b> FAN stack</b> (<b>F</b>irebase, <b>A</b>ngularJS, and <b>N</b>ode.js).
+
+                </p>
+                <p>
+                    <b>HOW IT WORKS</b>All Visitors are allowed to view listed books and rate them between 0 rating to 10 rating,<br/>
+                    Total Rating is displayed with the book details.
+                </p>
+                <p><img src="assets/images/sample_signature.png" alt=""></p>
+
+            </div>
+             <!-- end of col span_16 -->
+        </div> <!-- end of row -->
+    </div>
+    <!-- END OF CONTENT -->
+
+    <div id="Content-end" class="container"></div>
+
+
+    <div id="Footer" class="container">
+        <div class="row top">
+            <div class="col span_16">Copyright &copy; 2014, Adegboyega Olawale Olakunle. All rights reserved.</div>
+            <div class="col span_8 align-right">Design: <a href="http://www.gettemplate.com/">GetTemplate</a></div>
+        </div>
+    </div>
+
+    <!-- TODO: In order to track visits, insert google analytics code here -->
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    <!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+    <!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+    <!--<link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />-->
+    <script src="Scripts/jquery.min.js"></script>
+    <!-- UI Libs -->
+    <!--<script src="Scripts/bootstrap.js"></script>-->
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-cookies.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+
+    <!--Modules-->
+
+    <script src="Scripts/ui-bootstrap-tpls-0.12.0.min.js" data-semver="1.2.16"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-sanitize.js" data-semver="1.2.16"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-route.js" data-semver="1.2.16"></script>
+    <!--<script src="app/directives/animatedView.js"></script>-->
+    <!-- App libs -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controllers.js"></script>
+    <!--<script src="app/services/customersService.js"></script>-->
+    <script src="app/factories/bookFactory.js"></script>
+    <script src="app/directives/animatedView.js"></script>
+    <script src="app/directives/dirPagination.js"></script>
+
+
+    <!--<script src="assets/js/main.js"></script>-->
+
+</body>
+</html>
