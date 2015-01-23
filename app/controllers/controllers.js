@@ -22,7 +22,7 @@ app.controller('BookController', ['$scope', '$rootScope', 'bookFactory', '$cooki
     }
 
     ////Get the ip of this current user
-    $.getJSON("http://jsonip.com?callback=?", function (data) {
+    $.getJSON("//jsonip.com?callback=?", function (data) {
         
         $scope.ipp = bookFactory.escapeIpAddress(data.ip);
     });
@@ -97,7 +97,7 @@ app.controller('BookController', ['$scope', '$rootScope', 'bookFactory', '$cooki
                         var dataRate = TotalRate;
 
                     ///Fetch current user ip address
-                        $.getJSON("http://jsonip.com?callback=?", function (data) {
+                        $.getJSON("//jsonip.com?callback=?", function (data) {
                             var userIP = data.ip + '_' + $scope.id;
                             var datax = {
                                 rating: val,
