@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Domainer - single-page HTML template for domainers
 =============
 
@@ -31,3 +32,6 @@ Credits
 * Design and development: **Sergey Pozhilov** - http://pozhilov.com
 * Photo used in template: **Pixabay** - http://pixabay.com/en/server-room-datacenter-network-90389/
 * More free templates by Sergey: http://gettemplate.com
+=======
+# Buklab
+>>>>>>> 185721a3f2d90481605cb07db379547e7ad32657
