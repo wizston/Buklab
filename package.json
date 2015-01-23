@@ -7,14 +7,14 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "firebase": "^2.0.6"
   },
   "engines": {
     "node": "2.x"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wizston/buklab"
+    "url": "https://github.com/heroku/node-js-getting-started"
   },
   "keywords": [
     "node",
@@ -23,4 +23,4 @@
     "angularjs"
   ],
   "license": "MIT"
-}
+} 
