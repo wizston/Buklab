@@ -1,0 +1,26 @@
+{
+  "name": "buklab",
+  "version": "0.0.1",
+  "description": "A sample book rating app to ANDELA LAGOS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x"
+  },
+  "engines": {
+    "node": "2.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/buklab"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "firebase",
+    "angularjs"
+  ],
+  "license": "MIT"
+}
